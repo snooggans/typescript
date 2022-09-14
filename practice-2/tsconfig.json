@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+	  "target": "es5",
+	  "lib": ["es2019", "dom"],
+	  "moduleResolution": "node",
+	  "experimentalDecorators": true,
+	  "suppressImplicitAnyIndexErrors": true,
+	  "importHelpers": true,
+	  "outDir": "./dist/tsc",
+	  "sourceMap": false,
+	  "preserveConstEnums": true
+  },
+	"baseUrl": "./app/",
+	"paths": {
+		"@services/*": [
+			"services/*"
+		],
+		"@rest/*": [
+			"services/rest/*"
+		]
+	},
+  "include": ["./app/**/*"],
+  "exclude": [
+	  "../node_modules","dist", "**/*.spec.ts"]
+}
