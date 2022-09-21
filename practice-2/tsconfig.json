@@ -10,13 +10,16 @@
 	  "sourceMap": false,
 	  "preserveConstEnums": true
   },
-	"baseUrl": "./app/",
+	"baseUrl": "app",
 	"paths": {
 		"@services/*": [
 			"services/*"
 		],
 		"@rest/*": [
 			"services/rest/*"
+		],
+		"@assets/*": [
+			"assets/*"
 		]
 	},
   "include": ["./app/**/*"],

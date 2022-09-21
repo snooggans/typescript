@@ -6,6 +6,14 @@
 body{
   padding: 0;
   margin: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.page-header, .ticket-title{
+  background: #f2f3f4;
+  text-align: center;
+  text-align: center;
+  padding: 3rem 1rem;
 }
 
 .main-app {
@@ -18,7 +26,7 @@ body{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   width: 100%;
   max-width: 1280px;
 }
@@ -31,29 +39,109 @@ body{
 }
 
 .tour-block__inner{
-  display: block;
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
   width: 100%;
   height: 100%;
   background-color: #f2f3f4;
   border-radius: 0.5rem;
   cursor: pointer;
+
+  & .tour-header{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 1rem;
+  }
+
+  & h2{
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+
+  & .tour-pic{
+    position: relative;
+    height: 300px;
+    width: calc(100% + 2rem);
+    background-size: cover;
+    background-position: center;
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+
+  & .tour-price{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    background: #f2f3f4;
+    padding: 0.75rem;
+    padding-top: 0.35rem;
+    border-bottom-left-radius: 1rem;
+  }
+
+  & .tour-description{
+    margin-top: 2rem;
+  }
+
 }
 
 .modal_element {
+  overflow: hidden;
   color: $modal-text-color;
   background-color: $modal-background;
-  height: 360px;
+  min-height: 360px;
   width: 300px;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
-  justify-content: center;
+  justify-content: stretch;
   align-items: center;
   border-radius: 1rem;
   box-shadow: 0px 15px 45px rgba(45,45,45,0.3);
+  padding: 1rem;
+}
+
+.modal-close{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  width: 2rem;
+  height: 2rem;
+  border-bottom-left-radius: 1.5rem;
+  background: #e39f67;
+  padding: 1rem;
+  padding-right: 0.9rem;
+  color: white;
+  cursor: pointer;
+}
+
+.modal-ticket-btn{
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #e39f67;
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+  color: #f2f3f4;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-top: 0.5rem;
+}
+
+.ticket-info-wrapper{
+  margin: 2rem auto;
+  max-width: 1280px;
+  display: block;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 @media (max-width: 600px) {

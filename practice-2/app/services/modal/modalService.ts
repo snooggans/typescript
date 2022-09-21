@@ -8,11 +8,15 @@ export function openModal (type: string, i: number) {
 	let modalInfo: ITours = <ITours>{};
 	switch (type){
 		case "order":
+			console.log(data)
 			const modalTemplate = `
 			<div>
-				<div class="modal-close">X</div>
-				<p>${data.name}</p>		
-				<p>${data.description}</p>		
+				<div class="modal-close">X</div>				
+				<div class="modal-inner">
+					<h3>${data.name}</h3>		
+					<p>${data.description}</p>
+					<a class="modal-ticket-btn" href="ticket.html" data-tour-item-id="${data.id}">билет</a>
+				</div>		
 			</div>
 			`
 			const modal = new Modal('tour-modal');
